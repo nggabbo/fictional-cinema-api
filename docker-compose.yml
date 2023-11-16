@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  mysql:
+    image: mysql:8.2
+    container_name: fictional-cinema-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: fictional_cinema
+      MYSQL_USER: gab
+      MYSQL_PASSWORD: g4b
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - "3307:3306"
